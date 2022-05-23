@@ -54,3 +54,13 @@ class Convocation(models.Model):
 
     def __str__(self):
         return self.convocationTitle
+
+
+class Upcominglectures(models.Model):
+    lectureTitle = models.CharField(max_length=250)
+    lectureDate = models.DateField(auto_now_add=True)
+    lectreLink = models.URLField(max_length=500, null=True)
+    lectreBanner = models.FileField(upload_to='lecture')
+
+    def __str__(self):
+        return self.lectureTitle
