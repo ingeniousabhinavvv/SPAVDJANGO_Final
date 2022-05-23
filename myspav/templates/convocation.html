@@ -1,0 +1,31 @@
+{% include 'header.html' %}
+
+    <div class="container bg-light p-2">
+        <div class="row g-2">
+            {% for c in convocationData %}
+            <div class="col-sm-3">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                      <h5 class="card-title">{{c.convocationTitle}}</h5>
+                      <p class="card-text"><small class="text-muted">{{c.convocationDate}}</small></p>
+                    </div>
+                    <a href="{{c.convocationgallerUrl}}"><img src="{{c.convocationgalleryThumbnail.url}}" class="card-img-bottom" alt="..."></a>
+                  </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="container">
+        
+        
+        <ul>
+            {% for f in facultyData %}
+            <li>{{f.facultyName}}</li>
+            {% endfor %}
+        </ul>
+
+        
+    </div>
+
+{% include 'footer.html' %}

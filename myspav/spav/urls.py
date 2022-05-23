@@ -6,4 +6,6 @@ urlpatterns = [
     path('noticeboard/', views.noticeboard, name='noticeboard'),
     path('tender/', views.tender, name='tender'),
     path('gallery/', views.gallery, name='gallery'),
+    path('convocation/', views.convocation, name='convocation'),
+    path('faculty/', views.faculty, name='faculty'),
 ]

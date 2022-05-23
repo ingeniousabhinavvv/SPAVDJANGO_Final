@@ -30,4 +30,56 @@
       </div>
 </div>
 
+<div class="container-fluid">
+  <div class="row g-2">
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <h4>About SPAV</h4>
+          <p> School of Planning and Architecture, Vijayawada, (in short SPAV), was established on July 7, 2008 by the Ministry of Human Resource Development (MoE), Government of India, as an autonomous institution. SPAV is a premier Centrally Funded Technical Institution (CFTI) directly under the MoE, for excellence in the fields of Planning and Architecture. Although in its nascent stage, with experienced faculty and guest lectures by eminent visiting faculty and industry experts from all over the country, the quality of education imparted and its focus on research puts SPAV in the league of leading institutes in the country. "</p>
+          <h4>Vision</h4>
+          <p>“ To achieve academic excellence in Architecture and Planning through innovating, creating, acquiring and disseminating knowledge using sustainable local and global practices and enhancing the quality of society through responsible built environment. ”</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <h4>SPAV CAMPUS: A GLIMPSE</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% block content %}
+
+{% endblock %}
+
 {% include 'footer.html' %}

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from datetime import datetime
-from .models import Noticeboard, Tender, Gallery
+from .models import Noticeboard, Tender, Gallery, Convocation, Faculty
 # Create your views here.
 
 # ============comman data to sent on the page============ #
@@ -8,12 +8,16 @@ notice_board = Noticeboard.objects.all()
 current_datetime = datetime.now()
 tender_data = Tender.objects.all()
 galleryData = Gallery.objects.all()
+convocationData = Convocation.objects.all()
+facultyData = Faculty.objects.all()
 context = {
     'site_title': 'योजना तथा वास्तुकला विद्यालय विजयवाड़ा | School of Planning And Architecture Vijayawada',
     'current_datetime': current_datetime,
     'notice_board': notice_board,
     'tender_data': tender_data,
     'galleryData': galleryData,
+    'convocationData': convocationData,
+    'facultyData': facultyData,
 }
 # ============comman data to sent on the page============ #
 
@@ -32,3 +36,11 @@ def tender(request):
 
 def gallery(request):
     return render(request, 'gallery.html', context,)
+
+
+def convocation(request):
+    return render(request, 'convocation.html', context,)
+
+
+def faculty(request):
+    return render(request, 'faculty.html', context,)
