@@ -9,4 +9,7 @@ urlpatterns = [
     path('convocation/', views.convocation, name='convocation'),
     path('faculty/', views.faculty, name='faculty'),
     path('upcominglectures/', views.upcominglectures, name='upcominglectures'),
+    path('officeorder/', views.officeorder, name='officeorder'),
+    path('officeorder/', views.officeorder, name='officeorder'),
+    path('courseoffered/', views.courseoffered, name='courseoffered'),
 ]

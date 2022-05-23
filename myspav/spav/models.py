@@ -1,3 +1,4 @@
+from pickle import TRUE
 from pydoc import describe
 from django.db import models
 
@@ -64,3 +65,13 @@ class Upcominglectures(models.Model):
 
     def __str__(self):
         return self.lectureTitle
+
+
+class Officeorder(models.Model):
+    officeorderTitle = models.CharField(max_length=250)
+    orderDate = models.DateField(auto_now_add=True)
+    officeorderFile = models.FileField(upload_to='lecture')
+    lastUpdated = models.DateTimeField(auto_now_add=True, null=True)
+
+    def __str__(self):
+        return self.officeorderTitle
