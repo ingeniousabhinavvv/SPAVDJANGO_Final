@@ -1,0 +1,18 @@
+{% include 'header.html' %}
+
+<div class="container bg-light p-2">
+    <div class="card">
+        <div class="card-header bg-info"><h4 class="text-center">Tender</h4></div>
+        <div class="card-body">
+            <ul>
+                {% for t in tender_data %}
+                <li><a href="{{t.tenderFile.url}}" target="_blank">{{t.tenderTitle}}</a> <span>{{t.tenderTime}}</span></li>
+                <br>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <br><br>
+</div>
+
+{% include 'footer.html' %}

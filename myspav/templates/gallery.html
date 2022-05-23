@@ -1,0 +1,18 @@
+{% include 'header.html' %}
+
+<div class="container bg-light p-2">
+    <div class="row g-2">
+        {% for g in galleryData %}
+        <div class="col-sm-3">
+            <div class="card shadow-sm">
+                <div class="card-header bg-info"><h4 class="text-center">{{g.eventName}}</h4> <span>{{g.eventDate}}</span></div>
+                <div class="card-body">
+                    <a href="{{g.gallerUrl}}" target="_blank"><img class="img-fluid" src="{{g.galleryThumbnail.url}}" alt=""></a>
+                </div>
+            </div><br><br>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% include 'footer.html' %}
