@@ -50,3 +50,9 @@ def faculty(request):
 
 def upcominglectures(request):
     return render(request, 'upcominglectures.html', context,)
+
+
+#==========Views for Departments==========#
+def doa(request):
+    return render(request, 'doa.html', context,)
+#==========Views for Departments==========#

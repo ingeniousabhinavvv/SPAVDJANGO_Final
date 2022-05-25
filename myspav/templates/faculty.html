@@ -13,6 +13,7 @@
                         <div class="card-body">
                           <h5 class="card-title">{{f.facultyName}}</h5>
                           <p class="card-text"><small class="text-muted"><strong>{{f.facultyDesignation}}</strong></small></p>
+                          <p class="card-text"><small class="text-muted">Last Updated :-{{f.lastUpdated}}</small></p>
                           <p class="card-text"><strong>Qualification :-</strong>{{f.facultyQualification}}</p>
                           <p class="card-text"><strong>Phone :-</strong><a href="tel:+{{f.facultyPhone}}">{{f.facultyPhone}}</a></p>
                           <p class="card-text"><strong>Email :-</strong><a href="mailto:{{f.facultyEmail}}">{{f.facultyEmail}}</a></p>
@@ -21,8 +22,6 @@
                       </div>
                     </div>
                   </div>
-
-                
             </div>
             {% endfor %}
         </div>

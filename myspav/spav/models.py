@@ -13,6 +13,7 @@ class Faculty(models.Model):
     facultyEmail = models.EmailField(max_length=250)
     facultyCv = models.FileField(upload_to='facultycv')
     facultyPublications = models.URLField(max_length=250, null=True)
+    lastUpdated = models.DateField(auto_now=True)
 
     def __str__(self):
         return self.facultyName
