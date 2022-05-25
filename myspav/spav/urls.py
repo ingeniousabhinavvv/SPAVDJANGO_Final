@@ -10,4 +10,5 @@ urlpatterns = [
     path('faculty/', views.faculty, name='faculty'),
     path('upcominglectures/', views.upcominglectures, name='upcominglectures'),
     path('department-of-architecture/', views.doa, name='doa'),
+    path('department-of-planning/', views.dop, name='dop'),
 ]

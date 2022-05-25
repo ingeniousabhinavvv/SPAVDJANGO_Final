@@ -1,6 +1,33 @@
 *{
     margin: 0; padding: 0%; box-sizing: border-box;
 }
+
+/*font family and font style*/
+
 body{
-    background-color: aqua;
+    font-family: 'Poppins', sans-serif;
 }
+
+/*navbar style*/
+.nav-link{
+    font-size: medium;
+    font-weight: bold;
+}
+
+.card{
+    border: transparent;
+}
+
+/*style for links*/
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    color: rgb(0, 87, 58);
+}
+
+/*style for paragraph*/
+p{
+    text-align: justify;
+}
+

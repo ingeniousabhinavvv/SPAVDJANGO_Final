@@ -65,3 +65,12 @@ class Upcominglectures(models.Model):
 
     def __str__(self):
         return self.lectureTitle
+
+
+class GoiInitiative(models.Model):
+    initTitle = models.CharField(max_length=250, null=True)
+    goiLogo = models.ImageField(upload_to='goilogo', null=True)
+    goiLink = models.URLField(max_length=500, null=True)
+
+    def __str__(self):
+        return self.initTitle

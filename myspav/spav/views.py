@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from datetime import datetime
-from .models import Noticeboard, Tender, Gallery, Convocation, Faculty, Upcominglectures
+from .models import Noticeboard, Tender, Gallery, Convocation, Faculty, Upcominglectures, GoiInitiative
 # Create your views here.
 
 # ============comman data to sent on the page============ #
@@ -11,6 +11,7 @@ galleryData = Gallery.objects.all()
 convocationData = Convocation.objects.all()
 facultyData = Faculty.objects.all()
 upcomingLect = Upcominglectures.objects.all()
+goiLogos = GoiInitiative.objects.all()
 context = {
     'site_title': 'योजना तथा वास्तुकला विद्यालय विजयवाड़ा | School of Planning And Architecture Vijayawada',
     'current_datetime': current_datetime,
@@ -20,6 +21,7 @@ context = {
     'convocationData': convocationData,
     'facultyData': facultyData,
     'upcomingLect': upcomingLect,
+    'goiLogos': goiLogos,
 }
 # ============comman data to sent on the page============ #
 
@@ -55,4 +57,8 @@ def upcominglectures(request):
 #==========Views for Departments==========#
 def doa(request):
     return render(request, 'doa.html', context,)
+
+
+def dop(request):
+    return render(request, 'dop.html', context,)
 #==========Views for Departments==========#
