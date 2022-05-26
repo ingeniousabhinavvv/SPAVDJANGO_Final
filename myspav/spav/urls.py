@@ -11,4 +11,5 @@ urlpatterns = [
     path('upcominglectures/', views.upcominglectures, name='upcominglectures'),
     path('department-of-architecture/', views.doa, name='doa'),
     path('department-of-planning/', views.dop, name='dop'),
+    path('academics/', views.academics, name='academics'),
 ]

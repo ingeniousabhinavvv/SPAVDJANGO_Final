@@ -1,3 +1,4 @@
+from pickle import TRUE
 from pydoc import describe
 from django.db import models
 
@@ -74,3 +75,12 @@ class GoiInitiative(models.Model):
 
     def __str__(self):
         return self.initTitle
+
+
+class Slider(models.Model):
+    sliderTitle = models.CharField(max_length=250, null=True)
+    sliderBanner = models.ImageField(upload_to='goilogo', null=True)
+    sliderLink = models.URLField(max_length=500, null=True)
+
+    def __str__(self):
+        return self.sliderTitle

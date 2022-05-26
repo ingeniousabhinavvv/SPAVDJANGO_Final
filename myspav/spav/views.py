@@ -1,6 +1,8 @@
+from .forms import NameForm
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from datetime import datetime
-from .models import Noticeboard, Tender, Gallery, Convocation, Faculty, Upcominglectures, GoiInitiative
+from .models import Noticeboard, Tender, Gallery, Convocation, Faculty, Upcominglectures, GoiInitiative, Slider
 # Create your views here.
 
 # ============comman data to sent on the page============ #
@@ -12,6 +14,7 @@ convocationData = Convocation.objects.all()
 facultyData = Faculty.objects.all()
 upcomingLect = Upcominglectures.objects.all()
 goiLogos = GoiInitiative.objects.all()
+sliderImages = Slider.objects.all()
 context = {
     'site_title': 'योजना तथा वास्तुकला विद्यालय विजयवाड़ा | School of Planning And Architecture Vijayawada',
     'current_datetime': current_datetime,
@@ -22,12 +25,17 @@ context = {
     'facultyData': facultyData,
     'upcomingLect': upcomingLect,
     'goiLogos': goiLogos,
+    'sliderImages': sliderImages,
 }
 # ============comman data to sent on the page============ #
 
 
 def home(request):
     return render(request, 'home.html', context,)
+
+
+def academics(request):
+    return render(request, 'academics.html', context,)
 
 
 def noticeboard(request):
